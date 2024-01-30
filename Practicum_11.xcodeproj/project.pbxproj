@@ -13,8 +13,7 @@
 		9B3FDD6A2B14E784008EC7F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDD682B14E784008EC7F4 /* Main.storyboard */; };
 		9B3FDD6C2B14E784008EC7F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDD6B2B14E784008EC7F4 /* Assets.xcassets */; };
 		9B3FDD6F2B14E784008EC7F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FDD6D2B14E784008EC7F4 /* LaunchScreen.storyboard */; };
-		9B3FDD7D2B14E7A6008EC7F4 /* Module_11_practicumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FDD7C2B14E7A6008EC7F4 /* Module_11_practicumTests.swift */; };
-		9B3FDD842B14E812008EC7F4 /* MainViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FDD832B14E812008EC7F4 /* MainViewRepository.swift */; };
+		9B3FDD7D2B14E7A6008EC7F4 /* Practicum_11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FDD7C2B14E7A6008EC7F4 /* Practicum_11Tests.swift */; };
 		9B3FDD8B2B14EB16008EC7F4 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FDD8A2B14EB16008EC7F4 /* MainRepository.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +37,7 @@
 		9B3FDD6E2B14E784008EC7F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B3FDD702B14E784008EC7F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B3FDD7A2B14E7A6008EC7F4 /* Practicum_11Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practicum_11Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B3FDD7C2B14E7A6008EC7F4 /* Module_11_practicumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module_11_practicumTests.swift; sourceTree = "<group>"; };
-		9B3FDD832B14E812008EC7F4 /* MainViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRepository.swift; sourceTree = "<group>"; };
+		9B3FDD7C2B14E7A6008EC7F4 /* Practicum_11Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practicum_11Tests.swift; sourceTree = "<group>"; };
 		9B3FDD8A2B14EB16008EC7F4 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +87,6 @@
 				9B3FDD6B2B14E784008EC7F4 /* Assets.xcassets */,
 				9B3FDD6D2B14E784008EC7F4 /* LaunchScreen.storyboard */,
 				9B3FDD702B14E784008EC7F4 /* Info.plist */,
-				9B3FDD832B14E812008EC7F4 /* MainViewRepository.swift */,
 			);
 			path = Practicum_11;
 			sourceTree = "<group>";
@@ -97,7 +94,7 @@
 		9B3FDD7B2B14E7A6008EC7F4 /* Practicum_11Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9B3FDD7C2B14E7A6008EC7F4 /* Module_11_practicumTests.swift */,
+				9B3FDD7C2B14E7A6008EC7F4 /* Practicum_11Tests.swift */,
 			);
 			path = Practicum_11Tests;
 			sourceTree = "<group>";
@@ -216,7 +213,6 @@
 				9B3FDD8B2B14EB16008EC7F4 /* MainRepository.swift in Sources */,
 				9B3FDD632B14E784008EC7F4 /* AppDelegate.swift in Sources */,
 				9B3FDD652B14E784008EC7F4 /* SceneDelegate.swift in Sources */,
-				9B3FDD842B14E812008EC7F4 /* MainViewRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B3FDD7D2B14E7A6008EC7F4 /* Module_11_practicumTests.swift in Sources */,
+				9B3FDD7D2B14E7A6008EC7F4 /* Practicum_11Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

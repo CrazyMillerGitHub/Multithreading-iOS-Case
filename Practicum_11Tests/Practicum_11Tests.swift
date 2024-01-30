@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import Module_11_practicum
+@testable import Practicum_11
 
-final class Module_11_practicumTests: XCTestCase {
+final class Practicum_11Tests: XCTestCase {
 
     func test_mainRepository_in_concurrence_way() {
         // Arrange
