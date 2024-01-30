@@ -7,41 +7,6 @@
 
 import UIKit
 
-final class BankButton: UIButton {
-    enum BankButtonState {
-        case start
-        case stop
-
-        var buttonTitle: String {
-            return switch self {
-            case .stop:
-                "Включить поток"
-            case .start:
-                "Выключить поток"
-            }
-        }
-    }
-
-    var cashState: BankButtonState = .stop
-
-    func toggleState() {
-        if cashState == .stop {
-            cashState = .start
-        } else {
-            cashState = .stop
-        }
-    }
-}
-
-final class NetworkingService {
-
-    static func makeCashFlow(completionHandler: @escaping (Decimal) -> Void) {
-        DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now()) {
-            completionHandler(Decimal((0..<100).randomElement()!))
-        }
-    }
-}
-
 final class MainViewController: UIViewController {
 
     private var repository = MainRepository()
@@ -49,7 +14,9 @@ final class MainViewController: UIViewController {
     private lazy var currentBalanceLabel: UILabel = {
         let label = UILabel()
         label.text = repository.currentAmount.formatted(.currency(code: "RUB"))
+        label.font = .systemFont(ofSize: 18, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
 
         return label
     }()
@@ -99,6 +66,11 @@ final class MainViewController: UIViewController {
         return stackView
     }()
 
+    override func loadView() {
+        super.loadView()
+        view.backgroundColor = .systemBackground
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         [
@@ -106,6 +78,10 @@ final class MainViewController: UIViewController {
             stackView
         ].forEach(view.addSubview(_:))
 
+        prepareConstraints()
+    }
+
+    private func prepareConstraints() {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -121,7 +97,7 @@ final class MainViewController: UIViewController {
     private func toggleCashFlowState() {
         startCashFlowButton.setTitle(startCashFlowButton.cashState.buttonTitle, for: .normal)
 
-        NetworkingService.makeCashFlow { [weak self] extra in
+        NetworkingService.shared.makeCashFlow { [weak self] extra in
             guard let self = self else {
                 return
             }
@@ -139,8 +115,14 @@ final class MainViewController: UIViewController {
         repository.currentAmount -= 100
         showBalance(repository.currentAmount)
     }
+}
 
-    private func showBalance(_ balance: Decimal) {
+extension MainViewController: MainViewControllerProtocol {
+    func updateAppearence(state: BankButton.BankButtonState) {
+        // TODO: Add business logic
+    }
+
+    func showBalance(_ balance: Decimal) {
         currentBalanceLabel.text = repository.currentAmount.formatted(.currency(code: "RUB"))
     }
 }
