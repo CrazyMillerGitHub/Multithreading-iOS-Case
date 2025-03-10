@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import Practicum_11
+@testable import MultithreadingiOSCase
 
-final class Practicum_11Tests: XCTestCase {
+final class MainRepositoryTests: XCTestCase {
 
     func test_mainRepository_in_concurrence_way() {
         // Arrange
