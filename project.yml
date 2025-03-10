@@ -17,8 +17,9 @@ targets:
       properties:
         CFBundleVersion: "1.0"
         CFBundleShortVersionString: "1.0"
+        UILaunchStoryboardName: "LaunchScreen"
         UIApplicationSceneManifest:
-          UIApplicationSupportsMultipleScenes: false
+          UIApplicationSupportsMultipleScenes: true
           UISceneConfigurations:
             UIWindowSceneSessionRoleApplication:
               - UISceneConfigurationName: "Default Configuration"
@@ -26,7 +27,6 @@ targets:
     settings:
       TARGETED_DEVICE_FAMILY: 1
       SWIFT_VERSION: 5.0
-      UILaunchScreenName: LaunchScreen
 
   MultithreadingiOSCaseTests:
     type: bundle.unit-test
@@ -38,9 +38,11 @@ targets:
       - target: MultithreadingiOSCase
       - sdk: XCTest.framework
     info:
-      path: Resources/Info.plist
+      path: Tests/Info.plist
       properties:
         CFBundleVersion: "1.0"
         CFBundleShortVersionString: "1.0"
+        CFBundleIdentifier: "$(PRODUCT_BUNDLE_IDENTIFIER)"  # Убрано .Tests
+        CFBundleName: "MultithreadingiOSCaseTests"
     settings:
       SWIFT_VERSION: 5.0
